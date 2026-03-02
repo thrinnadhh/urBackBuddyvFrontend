@@ -1,5 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { PostureResult } from '../utils/postureMath';
+import { PostureMetrics } from '../utils/postureMath';
+
+export interface PostureResult extends PostureMetrics {
+    message: string;
+    reason?: string;
+}
 
 interface PoseOverlayProps {
     externalLandmarks?: any[]; // For TFJS from Parent

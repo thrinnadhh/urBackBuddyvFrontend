@@ -1,6 +1,5 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Sphere, Cylinder, Html } from '@react-three/drei';
 import * as THREE from 'three';
 
 const RobotModel = ({ isGood }: { isGood: boolean }) => {
@@ -89,7 +88,7 @@ const RobotModel = ({ isGood }: { isGood: boolean }) => {
     );
 };
 
-export const RobotBuddy = ({ score, isGood }: { score: number, isGood: boolean }) => {
+export const RobotBuddy = ({ isGood }: { score: number, isGood: boolean }) => {
     return (
         <div className="w-full h-full relative">
             <Canvas shadows camera={{ position: [0, 0, 5], fov: 50 }}>
